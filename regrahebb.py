@@ -1,4 +1,5 @@
 # Segunda atividade de RNA
+# Jorge Henrique Marques
 # Considere as 16 funções lógicas que podem ser construídas a partir de 2 variáveis.
 
 # Mostre que a regra de Hebb pode encontrar os pesos das redes neurais correspondentes
