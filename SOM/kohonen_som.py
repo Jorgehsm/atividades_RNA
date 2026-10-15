@@ -11,11 +11,11 @@ plt.ion()
 
 # Criar dataset 
 # (100 pontos de treinamento restritos a uma região circular de raio 0.5)
-
+num_pontos = 5000
 X1, X2 = [], []
 
 def dataset():
-    while len(X1) < 100:
+    while len(X1) < num_pontos:
         x1 = np.random.uniform(-0.5, 0.5)
         x2 = np.random.uniform(-0.5, 0.5)
 
@@ -25,7 +25,6 @@ def dataset():
     return np.array(X1), np.array(X2)
 
 # Inicializando pesos
-num_pontos = 50
 W1 = np.random.uniform(-1, 1, size=num_pontos)
 W2 = np.random.uniform(-1, 1, size=num_pontos)
 
@@ -39,6 +38,7 @@ def plot_rede(W1, W2, epoca, final=False):
     plt.xlim(-0.7, 0.7)
     plt.ylim(-0.7, 0.7)
     plt.grid(True)
+    plt.gca().set_aspect('equal', adjustable='box')
 
     if final:
         plt.show()
